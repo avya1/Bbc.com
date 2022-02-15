@@ -1,6 +1,7 @@
 package com.bbc.steps;
 
 import com.bbc.pages.Page1HomePage;
+import com.bbc.pages.SearchResultPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -30,5 +31,6 @@ public class MyStepdefs {
 
     @Then("^I can see sports news List$")
     public void iCanSeeSportsNewsList() {
+        new SearchResultPage().getResult();
     }
 }

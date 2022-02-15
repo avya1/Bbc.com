@@ -29,9 +29,10 @@ public class Page1HomePage extends Utility {
 
 
     public void getAllGamesOnPage(){
-       List<WebElement> allgames;
-        allgames = driver.findElements(By.xpath("(//div[@class='gel-layout gel-layout--center'])[2]"));
-        System.out.println(allgames);
+        List<WebElement> list = driver.findElements(By.xpath("//div[@data-reactid='.ijj2g76zm8.2.0.0.2.0']//a"));
+        for (WebElement link : list) {
+            System.out.println(link.getText());   }
+
     }
 
     public void serchByText(String searchText){
@@ -42,7 +43,5 @@ public class Page1HomePage extends Utility {
    public void clickOnSearchButton(){
         pmClickOnElement(searchButton);
    }
-
-
 
 }
