@@ -35,7 +35,10 @@ public class Utility extends ManageDriver {
     public void pmClickOnElement(WebElement element) {
         element.click();
     }
-
+    public void mouseHoverToElementAndClick(By by) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(by)).click().perform();
+    }
     /**
      * This method will get text from element
      */

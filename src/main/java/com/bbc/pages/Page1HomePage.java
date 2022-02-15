@@ -20,8 +20,12 @@ public class Page1HomePage extends Utility {
 
     @FindBy(xpath= "(//div[@class='gel-layout gel-layout--center'])[2]")
     List<WebElement> frame;
-    @FindBy(xpath= "//span[normalize-space()='Paris Saint Germain']")
-    WebElement click;
+    @FindBy(className= "se-searchbox__submit")
+    WebElement searchButton;
+    @FindBy(id="orb-search-q")
+    WebElement searchtab;
+    @FindBy(id="se-searchbox-input-field")
+    WebElement searchtab1;
 
 
     public void getAllGamesOnPage(){
@@ -30,8 +34,15 @@ public class Page1HomePage extends Utility {
         System.out.println(allgames);
     }
 
-    public void click(){
-        pmClickOnElement(click);
+    public void serchByText(String searchText){
+      pmMouseHoverAndClick(searchtab);
+        pmSendTextToElement(searchtab,searchText);
    }
+
+   public void clickOnSearchButton(){
+        pmClickOnElement(searchButton);
+   }
+
+
 
 }

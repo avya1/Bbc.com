@@ -1,8 +1,10 @@
 package com.bbc.steps;
 
 import com.bbc.pages.Page1HomePage;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class MyStepdefs {
     @Given("^I am on homepage of BBC Website$")
@@ -14,5 +16,19 @@ public class MyStepdefs {
     public void iAmAbleToSeeOutputAllTeamNamesWithAMatchTodayIfThereAreNoMatchesTodayOutputAMessageToConveyThis() {
         new Page1HomePage().getAllGamesOnPage();
 
+    }
+
+    @When("^I Search for \"([^\"]*)\"$")
+    public void iSearchFor(String arg0)  {
+        new Page1HomePage().serchByText(arg0);
+    }
+
+    @And("^I click on Search tab$")
+    public void iClickOnSearchTab() {
+        new Page1HomePage().clickOnSearchButton();
+    }
+
+    @Then("^I can see sports news List$")
+    public void iCanSeeSportsNewsList() {
     }
 }
