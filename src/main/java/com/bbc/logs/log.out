@@ -45,3 +45,11 @@ java.lang.IllegalStateException: cannot be started once stopped
 2022-02-15 16:02:645 INFO  ManageDriver :31 - Launching Chrome Browser
 2022-02-15 16:02:434 INFO  ManageDriver :31 - Launching Chrome Browser
 2022-02-15 16:02:506 INFO  ManageDriver :31 - Launching Chrome Browser
+2022-02-15 16:02:504 INFO  ManageDriver :31 - Launching Chrome Browser
+2022-02-15 16:02:565 INFO  ManageDriver :31 - Launching Chrome Browser
+2022-02-15 16:02:212 INFO  ManageDriver :31 - Launching Chrome Browser
+2022-02-15 16:02:794 INFO  ManageDriver :31 - Launching Chrome Browser
+2022-02-15 16:02:73 INFO  ManageDriver :31 - Launching Chrome Browser
+2022-02-15 16:02:804 INFO  ManageDriver :31 - Launching Chrome Browser
+2022-02-15 16:02:221 INFO  ManageDriver :31 - Launching Chrome Browser
+2022-02-15 16:02:552 INFO  ManageDriver :31 - Launching Chrome Browser

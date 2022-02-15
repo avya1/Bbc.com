@@ -18,30 +18,34 @@ public class Page1HomePage extends Utility {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath= "(//div[@class='gel-layout gel-layout--center'])[2]")
+    @FindBy(xpath = "(//div[@class='gel-layout gel-layout--center'])[2]")
     List<WebElement> frame;
-    @FindBy(className= "se-searchbox__submit")
+    @FindBy(className = "se-searchbox__submit")
     WebElement searchButton;
-    @FindBy(id="orb-search-q")
+    @FindBy(id = "orb-search-q")
     WebElement searchtab;
-    @FindBy(id="se-searchbox-input-field")
-    WebElement searchtab1;
 
 
-    public void getAllGamesOnPage(){
-        List<WebElement> list = driver.findElements(By.xpath("//div[@data-reactid='.ijj2g76zm8.2.0.0.2.0']//a"));
-        for (WebElement link : list) {
-            System.out.println(link.getText());   }
+    public void getAllGamesOnPage() {
 
+        List<WebElement> allGames = driver.findElements(By.xpath("//span[@class=\"gs-u-display-none gs-u-display-block@m qa-full-team-name sp-c-fixture__team-name-trunc\"]"));
+
+        if (allGames.size() == 0) {
+            System.out.println("There is no game today");
+        } else {
+            for (WebElement link : allGames) {
+                System.out.println("Teams playing today are :" + link.getText());
+            }
+        }
     }
 
-    public void serchByText(String searchText){
-      pmMouseHoverAndClick(searchtab);
-        pmSendTextToElement(searchtab,searchText);
-   }
+    public void serchByText(String searchText) {
+        pmMouseHoverAndClick(searchtab);
+        pmSendTextToElement(searchtab, searchText);
+    }
 
-   public void clickOnSearchButton(){
+    public void clickOnSearchButton() {
         pmClickOnElement(searchButton);
-   }
+    }
 
 }
